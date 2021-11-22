@@ -1,0 +1,238 @@
+<!doctype html>
+<html>
+  <head>
+	<meta name="viewpoint" content="with=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+    <title>АТМ Architecture</title>
+  </head>
+<body>
+<!---------- Header ----------->
+<section class="sub-header">
+		<nav>
+			<!-- <a href="index.html"><img src="images/logo.png"></a>-->
+			
+			<div class="nav-links">
+				<ul>
+					<li><a href="index.html">Начало</a></li>
+					<li><a href="architecture.html">АТМ архитектура</a></li>
+					<li><a href="info.html">За сайта</a></li>
+				</ul>
+			</div>
+		</nav>
+		
+	<h1>За сайта</h1>
+	</section>
+
+	
+<!----------- Acronyms ----------->
+	<div class="text">
+		<h3>Използвани съкращения</h3>
+		
+		<table class='table'>
+		<tr>
+			<td>AAL </td>
+			<td>ATM adaptation layer</td>
+			<td>ATM Aдаптационен слой</td>
+		</tr>
+		<tr>
+			<td>АТМ</td>
+			<td>Asynchronous Transfer Mode</td>
+			<td>Асинхроният режим на трансфер</td>
+		</tr>
+		<tr>
+			<td>BISDN</td>
+			<td>Broadband Integrated Services Digital Network</td>
+			<td>Цифровата мрежа с широколентови интегрирани услуги</td>
+		</tr>
+		<tr>
+			<td>CBR</td>
+			<td>Constant Bit Rate</td>
+			<td>Постоянна скорост на предаване</td>
+		</tr>
+		<tr>
+			<td>CDV</td>
+			<td>Cell Delay Variation</td>
+			<td>Вариация на закъснението на клетката</td>
+		</tr>
+		<tr>
+			<td>CER</td>
+			<td>Cell Error Ratio</td>
+			<td>Коефициент на грешка в клетката</td>
+		</tr>
+		<tr>
+			<td>CLP</td>
+			<td>Cell Loss Priority</td>
+			<td>Приоритет на загуба на клетки</td>
+		</tr>
+		<tr>
+			<td>CLR</td>
+			<td>Cell Loss Ratio</td>
+			<td>Коефициент на загуба на клетки</td>
+		</tr>
+		<tr>
+			<td>CPCS</td>
+			<td>Common Part Convergence Sublayer</td>
+			<td>Подслой за конвергенция на обща част</td>
+		</tr>
+		<tr>
+			<td>CTD</td>
+			<td>Cell Transfer Delay</td>
+			<td>Закъснение на трансфер на клетки</td>
+		</tr>
+		<tr>
+			<td>CVDT</td>
+			<td>Cell Variation Delay Tolerance</td>
+			<td>Толеранс на забавяне на вариация на клетките</td>
+		</tr>
+		<tr>
+			<td>GFl</td>
+			<td>Generic Flow Control</td>
+			<td>Общ контрол на потока</td>
+		</tr>
+		<tr>
+			<td>HEC</td>
+			<td>Header Error Control </td>
+			<td>Контрол на грешките в заглавната част</td>
+		</tr>
+		<tr>
+			<td>IP</td>
+			<td>Internet Protocol</td>
+			<td>Интернет протокол</td>
+		</tr>
+		<tr>
+			<td>ISDN</td>
+			<td>Integrated Services Digital Network</td>
+			<td>Цифрова мрежа с интегрирани услуги</td>
+		</tr>
+		<tr>
+			<td>LAN</td>
+			<td>Local Area Network</td>
+			<td>Локална мрежа</td>
+		</tr>
+		<tr>
+			<td>MAN</td>
+			<td>Metropolitan Area Network</td>
+			<td>Градски мрежи</td>
+		</tr>
+		<tr>
+			<td>MCR</td>
+			<td>Minimum Cell Rate</td>
+			<td>Минимална скорост на клетките</td>
+		</tr>
+		<tr>
+			<td>NNI</td>
+			<td>Network Network Interface</td>
+			<td>Интерфейс от мрежа към мрежа</td>
+		</tr>
+		<tr>
+			<td>OSI</td>
+			<td>Open Systems Interconnection Model </td>
+			<td>Отворен модел на свързване на системите</td>
+		</tr>
+		<tr>
+			<td>PCR</td>
+			<td>Peak Cell Rate</td>
+			<td>Пикова скорост на клетки</td>
+		</tr>
+		<tr>
+			<td>PMD</td>
+			<td>Physical Medium Dependent</td>
+			<td>Зависим от физическата среда</td>
+		</tr>
+		<tr>
+			<td>PSTN</td>
+			<td>Public Switched Telephone Network</td>
+			<td>Обществена комутируема телефонна мрежа</td>
+		</tr>
+		<tr>
+			<td>SCR</td>
+			<td>Sustained Cell Rate</td>
+			<td>Поддържана скорост на клетки</td>
+		</tr>
+		<tr>
+			<td>SVC</td>
+			<td>Switched Virtual Circuit</td>
+			<td>Комутиранa виртуалнa веригa</td>
+		</tr>
+		<tr>
+			<td>TC</td>
+			<td>Transmission Convergence</td>
+			<td>Конвергенция на предаването</td>
+		</tr>
+		<tr>
+			<td>VBR</td>
+			<td>Variable Bit Rate</td>
+			<td>Променлива скорост на предаване</td>
+		</tr>
+		<tr>
+			<td>VBR-NRT</td>
+			<td>Non-real Time</td>
+			<td>Нереално време</td>
+		</tr>
+		<tr>
+			<td>VBR-RT</td>
+			<td>Real-time</td>
+			<td>В реално време</td>
+		</tr>
+		<tr>
+			<td>VC</td>
+			<td>Virtual circuit</td>
+			<td>Виртуална верига</td>
+		</tr>
+		<tr>
+			<td>VCI</td>
+			<td>Virtual Channel Identifier</td>
+			<td>Идентификатор на виртуален канал</td>
+		</tr>
+		<tr>
+			<td>VPI</td>
+			<td>Virtual Path Identifier</td>
+			<td>Идентификатор на виртуален път</td>
+		</tr>
+		<tr>
+			<td>UBR</td>
+			<td>Unspecified Bit Rate</td>
+			<td>Неопределена скорост на предаване</td>
+        </tr>
+	    <tr>
+			<td>UNI</td>
+			<td>User Network Interface</td>
+			<td>Потребителски мрежов интерфейс</td>
+		</tr>
+		<tr>
+			<td>QoS</td>
+			<td>Quality of Service</td>
+			<td>Качество на услугата</td>
+		</tr>
+		<tr>
+			<td>WUBR</td>
+			<td>Weighted Unspecified Bit Rate</td>
+			<td>Претеглена неопределена скорост на предаване</td>
+      </tr>
+		</table>
+	</div>
+	
+	<!----------- Acronyms ----------->
+	<div class="text">
+		<h3>Източници</h3>
+		<ol>
+			<li><a href="https://en.wikipedia.org/wiki/Asynchronous_Transfer_Mode">https://en.wikipedia.org/wiki/Asynchronous_Transfer_Mode </a></li>
+			<li><a href='https://fossbytes.com/atm-asynchronous-transfer-mode-history-basic-concepts/'>https://fossbytes.com/atm-asynchronous-transfer-mode-history-basic-concepts/</a></li>
+			<li><a href='https://www.open.edu/openlearn/science-maths-technology/computing-ict/protocols-multi-service-networks/content-section-4.1'>https://www.open.edu/openlearn/science-maths-technology/computing-ict/protocols-multi-service-networks/content-section-4.1</a></li>
+			<li><a href='https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-2000-server/cc976978(v=technet.10)?redirectedfrom=MSDN'>https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-2000-server/cc976978(v=technet.10)?redirectedfrom=MSDN</a></li>
+			<li><a href='https://www.tutorialspoint.com/explain-the-atm-cell-structure-in-computer-network'>https://www.tutorialspoint.com/explain-the-atm-cell-structure-in-computer-network</a></li>
+			<li><a href='https://www.apposite-tech.com/blog/packet-switching-vs-circuit-switching/ '>https://www.apposite-tech.com/blog/packet-switching-vs-circuit-switching/ </a></li>
+			<li><a href='https://www.tutorialspoint.com/ATM-Networks'>https://www.tutorialspoint.com/ATM-Networks</a></li>
+			<li><a href='https://www.geeksforgeeks.org/quality-of-service-qos-in-atm/'>https://www.geeksforgeeks.org/quality-of-service-qos-in-atm/</a></li>
+		</ol>
+	</div>
+	
+<br>
+<!----------- Footer ----------->
+	<section class="footer">
+		<h4>Асинхронни високоскоростни мрежи</h4>
+		<p>Евгения Григорова 121218002</p>
+	</section>
+	
+</body>
+</html>
